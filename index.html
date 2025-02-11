@@ -19,44 +19,33 @@
             text-align: center;
         }
 
-        .character {
+        .heart {
             width: 150px;
             height: 150px;
-            background-color: #87CEEB;
-            border-radius: 50%;
-            position: relative;
+            background-color: #ff0000;
             margin: 0 auto 20px auto;
+            position: relative;
+            transform: rotate(-45deg);
         }
 
-        .character::before, .character::after {
+        .heart::before,
+        .heart::after {
             content: '';
-            width: 20px;
-            height: 20px;
-            background-color: #fff;
+            width: 150px;
+            height: 150px;
+            background-color: #ff0000;
             border-radius: 50%;
             position: absolute;
-            top: 40px;
         }
 
-        .character::before {
-            left: 30px;
+        .heart::before {
+            top: -75px;
+            left: 0;
         }
 
-        .character::after {
-            right: 30px;
-        }
-
-        .character::after {
-            animation: blush 1s infinite alternate;
-        }
-
-        @keyframes blush {
-            from {
-                background-color: #fff;
-            }
-            to {
-                background-color: #ff66b2;
-            }
+        .heart::after {
+            left: 75px;
+            top: 0;
         }
 
         h1 {
@@ -89,7 +78,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="character"></div>
+        <div class="heart"></div>
         <h1>Will you be my valentine?</h1>
         <div class="buttons">
             <button class="yes">YES</button>
